@@ -35,6 +35,9 @@ public:
 	// ステージの縦のタイルの数
 	static constexpr int STAGE_HEIGHT = 10;
 
+	// 点滅間隔
+	static constexpr int BLINK_INTERVAL = 120;
+
 	// データメンバの宣言 -----------------------------------------------
 private:
 

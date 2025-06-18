@@ -9,7 +9,7 @@
 // コンストラクタ
 Stage::Stage()
 	: m_stageData{}
-	, m_blink{ 120 }
+	, m_blink{ BLINK_INTERVAL }
 {
 }
 
@@ -115,8 +115,7 @@ void Stage::Render(int ghTileset) const
 			if (m_stageData[i][j] == Tile::BlinkFloor)
 			{
 				// 明るさを設定
-				int col = static_cast<int>(100.0f + 155.0f * m_blink.GetBlinkRate());
-				SetDrawBright(col, col, col);
+				SetDrawBright(100 + static_cast<int>(155 * m_blink.GetBlinkRate()), 80, 80);
 			}
 
 			// 描画するタイルの絵を決める
